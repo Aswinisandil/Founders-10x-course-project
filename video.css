@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+
+.section {
+  background-color: #fcfcfc;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 100vh;
+  max-width: none !important;
+}
+
+
+.wistia_responsive_wrapper {
+  width: 70%;
+  height: 50%;
+  left: 15%;
+  position: relative;
+  top: 0;
+  z-index: 0;
+}
+
+.logo {
+  width: 10vw;
+  height: 8vw;
+  padding: 0.5em;
+  margin-top: 1.5em;
+  margin-left: 10em;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.video-container {
+  padding-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 35vh;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* iframe {
+  width: 59.5%;
+  height: 100%;
+  border: 7px solid #175779;
+  border-radius: 15px;
+  background-color: black;
+} */
+
+.apply {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 3.5vw auto 0 auto;
+  z-index: 50 !important;
+
+}
+
+.apply a {
+  text-decoration: none;
+}
+
+#popupButton {
+  background-color: #175779;
+  color: #fcfcfc;
+  padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+  border: none;
+  width: 100%;
+  font-size: 1.2vw;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  animation: glow 1s infinite alternate;
+  margin: 0 auto 0 auto;
+}
+
+#popupButton p{
+  color: #ffffff !important;
+  margin-bottom: 0 !important;
+  padding: 0.5rem;
+}
+
+
+@media only screen and (max-width: 1025px) {
+  .section {
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100vh;
+    max-width: none !important;
+  }
+
+  .video-container {
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 48.09vh;
+  }
+
+  iframe {
+    width: 81.24%;
+    height: 100%;
+    margin: 1vw;
+    border-radius: 1vw;
+    border: 7px solid #175779;
+  }
+
+  .logo {
+    width: 8em;
+    height: 7em;
+    padding: 0.5em;
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .apply {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin: 10vw auto 0 auto;
+  }
+
+  .apply button {
+    font-size: 2vw !important;
+    font-weight: 600;
+    width: 100% !important;
+    padding: 1vw 1vw !important;
+    border: none;
+    background-color: #ff9c1b;
+    border-radius: 1vw;
+  }
+
+  .apply button:hover {
+    color: black;
+  }
+
+  #popupButton {
+    background-color: #175779;
+    color: #fcfcfc;
+    padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+    border: none;
+    width: 100%;
+    font-size: 1.2vw;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    animation: glow 1s infinite alternate;
+    margin: 0 auto 0 auto;
+  }
+  
+  #popupButton p{
+    color: #ffffff !important;
+    margin-bottom: 0 !important;
+    padding: 0.5rem;
+  }
+  
+}
+
+@media only screen and (max-width: 575px) {
+  .section {
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100vh;
+    max-width: none !important;
+  }
+
+  .section-data {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    width: 80vw;
+    gap: 5vw;
+    height: 60vh;
+  }
+
+  .video-container {
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 38vh;
+  }
+
+  .wistia_responsive_wrapper {
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    position: absolute;
+    top: 40%;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vw;
+  }
+
+  iframe {
+    border: 1px solid #175779;
+    border-radius: 10px;
+    width: 100%;
+    height: 110%;
+  }
+
+  .logo {
+    width: 21vw;
+    height: 18vw;
+    z-index: 5;
+    padding: 0.5em;
+    margin-top: 2em;
+  }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .apply {
+    position: relative;
+    width: 63vw;
+    display: flex;
+    justify-content: center;
+    margin: 60vw auto 0 auto;
+
+  }
+
+  .apply button {
+    font-size: 3vw !important;
+    font-weight: 600;
+    width: 100% !important;
+    padding: 2vw 3vw !important;
+    border: none;
+    background-color: #ff9c1b;
+    border-radius: 1vw !important;
+  }
+
+  .section-data #button123 {
+    gap: 2vw;
+    margin-bottom: -25vw !important;
+  }
+
+  #popupButton {
+    background-color: #175779;
+    color: #fcfcfc;
+    padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+    border: none;
+    width: 100%;
+    font-size: 1.2vw;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    animation: glow 1s infinite alternate;
+    margin: 0 auto 0 auto;
+  }
+  
+  #popupButton p{
+    color: #ffffff !important;
+    margin-bottom: 0 !important;
+    padding: 0.5rem;
+  }
+}

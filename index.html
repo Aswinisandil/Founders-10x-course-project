@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>10X Your Growth With Workhours</title>
+    <link rel="shortcut icon" href="./" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T4WV2WHR");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "933890360400798");
+      fbq("track", "PageView");
+    </script>
+
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=933890360400798&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T4WV2WHR"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container1">
+      <div class="navbar1">
+        <div class="logo">
+          <img src="./egwserg.png" alt="logo" />
+        </div>
+        <div class="header">
+          <img src="./header.png" alt="heading" />
+        </div>
+      </div>
+      <div class="hero">
+        <div class="section-video">
+          <img src="./vid pic.jpg" alt="webinar-thumbnail" />
+          <button class="button">
+            <i class="fa-solid fa-play" id="play" style="color: #ffffff"></i>
+          </button>
+        </div>
+        <div class="stars">
+          <img src="./stars.png" alt="rating" />
+          <p class="rating">Rated on Google</p>
+        </div>
+
+        <div class="section-data">
+          <h3>What will you learn in this video?</h3>
+          <ul class="points">
+            <li>As a Digital Marketer, how to start an agency.</li>
+            <li>How to scale your agency 10x with high ticket selling.</li>
+            <li>
+              Success Stories of students who charged premium & earned 30+
+              lakhs.
+            </li>
+          </ul>
+
+          <button id="button123" value="submit">
+            <i
+              class="fa-solid fa-play"
+              id="watch-button1"
+              style="color: #ffffff"
+            ></i>
+            <p>Watch now for Free</p>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-button">&times;</span>
+        <h1>Watch Now For Free</h1>
+        <h3>Enter your info, start watching the video immediately</h3>
+        <form id="feedback-form" action="submit.php" method="POST">
+
+          <iframe
+            frameborder="0"
+            style="height: 500px; width: 99%; border: none"
+            src="https://forms.zohopublic.in/workhours/form/10xGrowth/formperma/ih8JgLHpl15gteBV7XvOoOEzMCvjiJYGmXjSQccd0vw"
+          ></iframe>
+
+          <h1 id="msg"></h1>
+        </form>
+      </div>
+    </div>
+
+    <div id="page-loader">
+      <div class="loader"></div>
+    </div>
+
+    <script src="./code.js"></script>
+
+    <script>
+      let form = document.querySelector("form");
+
+      function validateNameInput(inputElement) {
+        const name = inputElement.value;
+        const namePattern = /^[A-Za-z]+$/;
+
+        if (namePattern.test(name)) {
+          // Valid input, clear any previous error message
+          document.getElementById("nameError").textContent = "";
+          return true;
+        } else {
+          // Invalid input, display an error message
+          document.getElementById("nameError").textContent =
+            "Please enter alphabetic characters only.";
+          // Optionally, you can clear the invalid input
+          inputElement.value = "";
+          return false;
+        }
+      }
+
+      function validateMobileNumber() {
+        // Get the input value
+        const inputElement = document.getElementById("contact");
+        const mobileNumber = inputElement.value;
+
+        // Regular expression to match a 10-digit mobile number
+        const mobileNumberPattern = /^\d{10}$/;
+
+        // Check if the input matches the pattern
+        if (mobileNumberPattern.test(mobileNumber)) {
+          // Valid mobile number, you can perform further actions here
+          document.getElementById("errorText").textContent = "";
+          return true; // Clear any previous error message
+        } else {
+          // Invalid mobile number, display an error message
+          document.getElementById("errorText").textContent =
+            "Invalid mobile number. Please enter a 10-digit number.";
+          return false;
+        }
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        document.querySelector("#sub").disabled = true;
+
+        let data = new FormData(form);
+        const pageLoader = document.getElementById("page-loader");
+        fetch(
+          "https://script.google.com/macros/s/AKfycbw8GV9hALYVAix4KGgfEkGOpENpxgbBOBKXXJCYPcu__HAEr9BpCl8bwsr247wnJ123ng/exec",
+          {
+            method: "POST",
+            body: data,
+          }
+        )
+          .then((res) => res.text())
+          .then((data) => {
+            pageLoader.style.display = "block";
+            document.querySelector("#msg").innerHTML = data;
+            document.querySelector("#sub").value = "Submit";
+
+            setTimeout(() => {
+              window.location.href = "video.html";
+              window.location.replace("https://workhours.in/video/");
+              pageLoader.style.display = "none";
+            }, 3000);
+          });
+      });
+    </script>
+
+    <script>
+      // Function to get URL parameter values
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+        var results = regex.exec(location.search);
+        return results === null
+          ? ""
+          : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      // Populate UTM parameter fields
+      document.getElementById("utm_source").value =
+        getUrlParameter("utm_source");
+      console.log("UTM Source:", getUrlParameter("utm_source"));
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript"> 
+      function ZFLead(){
+      }
+      ZFLead.utmPValObj = ZFLead.utmPValObj || {};
+      
+      ZFLead.utmPNameArr = new Array('utm_source','utm_medium','utm_campaign','utm_term','utm_content');
+      
+      ZFLead.prototype.zfutm_getLeadVal = function(pName){
+        var qStr = '';
+        try{
+          qStr = window.top.location.search.substring(1);
+        } catch (e){
+          qStr = '';
+        }
+        var pNameTemp = pName + '=';
+        var pValue = '';
+        if ( typeof qStr !== "undefined" && qStr !== null && qStr.length > 0 ){
+          var begin = qStr.indexOf(pNameTemp);
+          if ( begin != -1 ){
+            begin = begin + pNameTemp.length;
+            end = qStr.indexOf( '&', begin );
+            if ( end == -1 ){
+              end = qStr.length;
+            }
+            pValue = decodeURIComponent(qStr.substring( begin, end ));
+          }
+        }
+        if (pValue == undefined || pValue == ''){
+          pValue = this.zfutm_gC(pName);
+        }
+        return pValue;
+      };
+      
+      ZFLead.prototype.zfutm_sC = function( paramName,path,domain,secure ){
+        var value = ZFLead.utmPValObj[paramName];
+        if ( typeof value !== "undefined" && value !== null ){
+          var cookieStr = paramName + "=" + encodeURIComponent( value );
+          var exdate=new Date();
+          exdate.setDate(exdate.getDate()+7);
+          cookieStr += "; expires=" + exdate.toGMTString();
+          cookieStr += "; path=/";
+          if ( domain ) {
+            cookieStr += "; domain=" + encodeURIComponent( domain );
+          }
+          if ( secure ) {
+            cookieStr += "; secure";
+          }
+          document.cookie = cookieStr;
+        }
+      };
+      
+      ZFLead.prototype.zfutm_ini = function (){
+        for (var i = 0; i < ZFLead.utmPNameArr.length ; i ++){
+          var zf_pN = ZFLead.utmPNameArr[i];
+          var zf_pV = this.zfutm_getLeadVal(zf_pN);
+          if ( typeof zf_pV !== "undefined" && zf_pV !== null ) {
+            ZFLead.utmPValObj[ zf_pN ] = zf_pV;
+          }
+        }
+        for (var pkey in ZFLead.utmPValObj) {
+          this.zfutm_sC(pkey);
+        }
+      };
+      ZFLead.prototype.zfutm_gC = function( cookieName ){
+        var cookieArr = document.cookie.split('; ');
+        for ( var i = 0 ; i < cookieArr.length ; i ++ ){
+          var cookieVals = cookieArr[i].split('=');
+          if ( cookieVals[0] === cookieName && cookieVals[1] ) {
+            return decodeURIComponent(cookieVals[1]);
+          }
+        }
+      };
+      ZFLead.prototype.zfutm_gC_enc = function( cookieName ){
+        var cookieArr = document.cookie.split('; ');
+        for ( var i = 0 ; i < cookieArr.length ; i ++ ){
+          var cookieVals = cookieArr[i].split('=');
+          if ( cookieVals[0] === cookieName && cookieVals[1] ) {
+            return cookieVals[1];
+          }
+        }
+      };
+      ZFLead.prototype.zfutm_iframeSprt = function () {
+        var zf_frame = document.getElementsByTagName("iframe");
+        for(var i = 0; i < zf_frame.length; ++i){
+          if((zf_frame[i].src).indexOf('formperma') > 0 ){
+            var zf_src = zf_frame[i].src;
+            for( var prmIdx = 0 ; prmIdx < ZFLead.utmPNameArr.length ; prmIdx ++ ) {
+              var utmPm = ZFLead.utmPNameArr[ prmIdx ];
+              var utmVal = this.zfutm_gC_enc( ZFLead.utmPNameArr[ prmIdx ] );
+              if ( typeof utmVal !== "undefined" ) {
+                if(zf_src.indexOf('?') > 0){
+                            zf_src = zf_src+'&'+utmPm+'='+utmVal;
+                }else{
+                    zf_src = zf_src+'?'+utmPm+'='+utmVal;
+                }
+              }
+            }
+            if ( zf_frame[i].src.length < zf_src.length ) {
+              zf_frame[i].src = zf_src;
+            }
+          }
+        }
+      };
+      ZFLead.prototype.zfutm_DHtmlSprt = function () {
+        var zf_formsArr = document.forms;
+        for ( var frmInd = 0 ; frmInd < zf_formsArr.length ; frmInd ++ ) {
+          var zf_form_act = zf_formsArr[frmInd].action;
+          if ( zf_form_act && zf_form_act.indexOf('formperma') > 0 ){
+            for( var prmIdx = 0 ; prmIdx < ZFLead.utmPNameArr.length ; prmIdx ++ ) {
+              var utmPm = ZFLead.utmPNameArr[ prmIdx ];
+              var utmVal = this.zfutm_gC( ZFLead.utmPNameArr[ prmIdx ] );
+              if ( typeof utmVal !== "undefined" ) {
+                var fieldObj = zf_formsArr[frmInd][utmPm];
+                if ( fieldObj ) {
+                  fieldObj.value = utmVal;
+                }
+              }
+            }
+          }
+        }
+      };
+      ZFLead.prototype.zfutm_jsEmbedSprt = function ( id ) {
+        document.getElementById('zforms_iframe_id').removeAttribute("onload"); 
+        var jsEmbdFrm = document.getElementById("zforms_iframe_id");
+        var embdSrc = jsEmbdFrm.src;
+          for( var prmIdx = 0 ; prmIdx < ZFLead.utmPNameArr.length ; prmIdx ++ ) {
+          var utmPm = ZFLead.utmPNameArr[ prmIdx ];
+          var utmVal = this.zfutm_gC_enc( ZFLead.utmPNameArr[ prmIdx ] );
+          if ( typeof utmVal !== "undefined" ) {
+            if(embdSrc.indexOf('?') > 0){
+                    embdSrc = embdSrc+'&'+utmPm+'='+utmVal;
+            }else{
+                embdSrc = embdSrc+'?'+utmPm+'='+utmVal;
+            }
+          }
+        }
+        jsEmbdFrm.src = embdSrc;
+      };
+      var zfutm_zfLead = new ZFLead();
+      zfutm_zfLead.zfutm_ini();
+      if( document.readyState == "complete" ){
+          zfutm_zfLead.zfutm_iframeSprt();
+        zfutm_zfLead.zfutm_DHtmlSprt();
+      } else {
+          window.addEventListener('load', function (){
+              zfutm_zfLead.zfutm_iframeSprt();
+          zfutm_zfLead.zfutm_DHtmlSprt();
+          }, false);
+      }
+      </script>
+  </body>
+</html>

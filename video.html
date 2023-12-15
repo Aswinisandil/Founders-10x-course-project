@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://fast.wistia.com/embed/medias/en9q91rq1q.jsonp"
+      async
+    ></script>
+    <script
+      src="https://fast.wistia.com/assets/external/E-v1.js"
+      async
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charge 500,000 to your client</title>
+    <link rel="shortcut icon" href="./workhours logo.png" type="image/x-icon" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T4WV2WHR");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "933890360400798");
+      fbq("track", "PageView");
+    </script>
+
+    <!-- video scripts start -->
+
+    <!-- video scripts end -->
+
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=933890360400798&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link rel="stylesheet" href="video.css" />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T4WV2WHR"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="section">
+      <div class="logo">
+        <img src="./egwserg.png" alt="logo" />
+      </div>
+
+      <!-- Wistia video code starts -->
+
+      <div
+        class="wistia_responsive_padding"
+        style="padding: 0 0 0 0; position: relative"
+      >
+        <div class="wistia_responsive_wrapper">
+          <div
+            class="wistia_embed wistia_async_en9q91rq1q seo=true videoFoam=true"
+            style="height: 100%; position: relative; width: 100%"
+          >
+            <div
+              class="wistia_swatch"
+              style="
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                transition: opacity 200ms;
+                width: 100%;
+              "
+            >
+              <img
+                src="https://fast.wistia.com/embed/medias/en9q91rq1q/swatch"
+                style="
+                  filter: blur(5px);
+                  height: 100%;
+                  object-fit: contain;
+                  width: 100%;
+                "
+                alt=""
+                aria-hidden="true"
+                onload="this.parentNode.style.opacity=1;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Wistia video code ends -->
+
+      <div class="apply">
+        <a href="https://workhours.in/apply">
+          <button id="popupButton" style="display: none;"><p>Apply for a Free Consultation Call</p></button>
+        </a>
+      </div>
+    </div>
+
+   
+    <!-- JavaScript to track video progress and show the button -->
+    <script src="https://fast.wistia.com/embed/medias/en9q91rq1q.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    
+    <script>
+      window.addEventListener("load", function () {
+        // Wait for the Wistia API to be ready
+        window._wq = window._wq || [];
+        window._wq.push({ id: "en9q91rq1q", onReady: initializeVideoTracking });
+
+        function initializeVideoTracking(video) {
+            // Calculate the midpoint of the video when metadata is available
+            var duration = video.duration();
+            var midpoint = duration / 2;
+
+            // Check for video progress
+            video.bind("secondchange", function (seconds) {
+                if (seconds >= midpoint) {
+                    // Show the button
+                    document.getElementById("popupButton").style.display = "block";
+                    console.log("Button popped up");
+                }
+            });
+        }
+      });
+    </script>
+    
+
+  </body>
+</html>
